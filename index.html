@@ -6,11 +6,11 @@
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
-      <a-assets>
+      <a-assets timeout="30000">
         <img id="web" src="assets/webog.png">
         <img id="phone" src="assets/phoneog.png">
         <img id="mail" src="assets/mailog.png">
-        <video id="sample" autoplay="true" src="assets/sample.mp4"></video>
+        <video id="sample" src="assets/sample.mp4"></video>
       </a-assets>
       <a-marker preset= "hiro">
           <a-image src="#web" rotation="90 0 0" position="-1 0 -0.5" width="0.3" height="0.3">
@@ -19,7 +19,7 @@
         </a-image>
         <a-image src="#mail" rotation="90 0 0" position="-1 0 0.5" width="0.3" height="0.3">
         </a-image>
-        <a-video src="#sample" rotation="90 0 0" width="2" height="1" position="0 0 -1.3"></a-video>
+        <a-video src="#sample" rotation="90 0 0" width="2" height="1" position="0 0 -1.3" preload="auto"></a-video>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
