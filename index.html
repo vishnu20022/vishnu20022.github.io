@@ -5,14 +5,14 @@
   <!-- we import arjs version without NFT but with marker + location based support -->
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs>
+    <a-scene embedded arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
       <a-assets timeout="300000">
         <img id="web" src="assets/webog.png">
         <img id="phone" src="assets/phoneog.png">
         <img id="mail" src="assets/mailog.png">
         <!--video id="sample" src="assets/sample.mp4"></video-->
       </a-assets>
-      <a-marker type="pattern" patternUrl="assets/pattern-Logo.patt">
+      <a-marker type='barcode' value='5'>
           <a-image src="#web" rotation="90 0 0" position="-1 0 -0.5" width="0.3" height="0.3">
           </a-image>
         <a-image src="#phone" rotation="90 0 0" position="-1 0 0" width="0.3" height="0.3">
